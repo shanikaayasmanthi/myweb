@@ -1,12 +1,12 @@
 import React from "react";
 import "./header.css";
 import Navbar from "./Navbar";
-import Image from "./background.jpeg";
+import Image from "./back.jpg";
 
 export default function Header() {
   return (
     <div>
-      <div className="main" style={{ backgroundImage: `url(${Image})` }}>
+      <div className="main" style={{ backgroundImage: `url(${Image})`,backgroundRepeat:"no-repeat",backgroundSize:"contain",height:"740px" }}>
         <Navbar />
         <center>
           <div className="description">

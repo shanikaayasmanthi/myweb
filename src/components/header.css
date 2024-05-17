@@ -1,9 +1,10 @@
 .main{
-    background-color: rgb(2, 29, 46);
+    /* background-color: rgb(2, 29, 46); */
     height: 400px;
 }
 .main .description{
     margin-top: 10vh;
+    color: rgb(221, 220, 220);
 }
 
 .main .name{
