@@ -1,0 +1,16 @@
+.main{
+    background-color: rgb(2, 29, 46);
+    height: 400px;
+}
+.main .description{
+    margin-top: 10vh;
+}
+
+.main .name{
+    font-size: 6vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.main .name span{
+    font-size: 6.5vh;
+}
