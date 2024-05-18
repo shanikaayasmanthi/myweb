@@ -6,7 +6,7 @@ import Image from "./back.jpg";
 export default function Header() {
   return (
     <div>
-      <div className="main" style={{ backgroundImage: `url(${Image})`,backgroundRepeat:"no-repeat",backgroundSize:"contain",height:"740px" }}>
+      <div className="main" style={{ backgroundImage: `url(${Image})`,backgroundRepeat:"no-repeat",backgroundSize:"cover",height:"550px",opacity:"0.9" }}>
         <Navbar />
         <center>
           <div className="description">

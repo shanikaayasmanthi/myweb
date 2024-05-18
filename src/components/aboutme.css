@@ -1,0 +1,48 @@
+.about{
+    background-color: rgb(105, 105, 126);
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.about .profile{
+    border: 10vh;
+    border-color: black;
+    margin-top: 40px;
+    /* margin-right: 40px; */
+    border: 10px solid rgb(29, 13, 47);
+    margin-bottom: 40px;
+}
+
+
+.about .profile img{
+
+    height: 300px;
+    width: 240px;
+    margin-right: 70px;
+    
+}
+
+.about .info{
+    padding-top: 40px;
+    width: 50%;
+    align-items: left;
+}
+
+.info h2{
+    color: rgb(29, 13, 47);
+    font-size: 4vh;
+}
+.about .info hr{
+    width: 30%;
+    height: 5px;
+}
+
+.info .para{
+    width: 80%;
+    /* text-align:justify; */
+    align-items: center;
+    
+    
+}
