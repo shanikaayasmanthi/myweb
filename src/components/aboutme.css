@@ -13,6 +13,7 @@
     /* margin-right: 40px; */
     border: 10px solid rgb(29, 13, 47);
     margin-bottom: 40px;
+    border-radius: 50%;
 }
 
 
@@ -32,7 +33,13 @@
 
 .info h2{
     color: rgb(29, 13, 47);
+    width: fit-content;
     font-size: 4vh;
+    /* background: linear-gradient(to right,
+                  rgb(29, 13, 47),
+                  white);
+            -webkit-background-clip: text;
+            color: transparent; */
 }
 .about .info hr{
     width: 30%;
@@ -45,4 +52,21 @@
     align-items: center;
     
     
+}
+
+.info .details{
+    margin-top: 4vh;
+}
+
+.info .details h4{
+    color: rgb(29, 13, 47);
+    font-size: 2vh;
+    margin-top: 10px;
+}
+
+.details h4 span{
+    color: white;
+    font-weight: 100;
+    padding-left: 10px;
+    font-size: 2vh;
 }
