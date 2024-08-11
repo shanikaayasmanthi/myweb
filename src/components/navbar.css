@@ -7,9 +7,9 @@
 
 .icon{
     cursor: pointer;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
 }
 
 .icon:hover{
-    color: #aea6a6;
+    color: rgb(174, 166, 166);
 }
