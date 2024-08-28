@@ -1,19 +1,19 @@
 import React from 'react'
 // import './navbar.css'
 
-import { FaGithub } from 'react-icons/fa';
-import { FaFacebook } from 'react-icons/fa';
-import { FaWhatsapp } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa';
-import { FaLinkedin } from 'react-icons/fa';
+// import { FaGithub } from 'react-icons/fa';
+// import { FaFacebook } from 'react-icons/fa';
+// import { FaWhatsapp } from 'react-icons/fa';
+// import { FaEnvelope } from 'react-icons/fa';
+// import { FaLinkedin } from 'react-icons/fa';
 
-const icons =[
-  {name:"whatsapp", icon:"FaWhatsapp"},
-  {name:"github", icon:"FaGithub"},
-  {name:"gmail", icon:"FaEnvelope"},
-  {name:"linkedin", icon:"FaLinkedin"},
-  {name:"facebook", icon:"FaFacebook"}
-];
+// const icons =[
+//   {name:"whatsapp", icon:"FaWhatsapp"},
+//   {name:"github", icon:"FaGithub"},
+//   {name:"gmail", icon:"FaEnvelope"},
+//   {name:"linkedin", icon:"FaLinkedin"},
+//   {name:"facebook", icon:"FaFacebook"}
+// ];
 
 const navbarItems=[
   {name:"Home", link:""},
@@ -23,22 +23,22 @@ const navbarItems=[
   {name:"Contact", link:""}
 ];
 
-function geticon(icon){
-  switch (icon) {
-    case 'FaWhatsapp':
-      return FaWhatsapp;
-    case 'FaGithub':
-      return FaGithub;
-    case 'FaEnvelope':
-      return FaEnvelope;
-    case 'FaLinkedin':
-      return FaLinkedin;
-    case 'FaFacebook':
-      return FaFacebook;
-    default:
-      break;
-  }
-}
+// function geticon(icon){
+//   switch (icon) {
+//     case 'FaWhatsapp':
+//       return FaWhatsapp;
+//     case 'FaGithub':
+//       return FaGithub;
+//     case 'FaEnvelope':
+//       return FaEnvelope;
+//     case 'FaLinkedin':
+//       return FaLinkedin;
+//     case 'FaFacebook':
+//       return FaFacebook;
+//     default:
+//       break;
+//   }
+// }
 
 export default function Navbar() {
   return (
