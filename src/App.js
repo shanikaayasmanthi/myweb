@@ -1,6 +1,5 @@
 // import './App.css';
 import Index from './pages';
-import Home from './components/Home';
 
 function App() {
   return (
