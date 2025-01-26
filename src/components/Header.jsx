@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar/Navbar";
 import Image from "./back.jpg";
 
 export default function Header() {
