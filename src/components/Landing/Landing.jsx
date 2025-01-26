@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { headerData } from "../../data/headerData";
 import {
   FaBars,
-  FaCross,
   FaEnvelope,
   FaFacebook,
   FaGithub,
   FaLinkedin,
-  FaPhone,
   FaX,
 } from "react-icons/fa6";
 import { navData } from "../../data/navData";
@@ -16,6 +14,34 @@ const Landing = () => {
   const [shownavItems, setShownavItems] = useState(false);
   console.log(shownavItems);
   console.log(navData);
+  const linkRef = useRef(null);
+
+  const downloadCv=async()=>{
+    console.log("clicked");
+    
+    try{
+      const blob = await fetch(headerData.resumePdf).then((response)=>response.blob());
+      const url =window.URL.createObjectURL(blob);
+      const  link = document.createElement("a");
+      link.href = url;
+      link.download = 'shanika_ayasmanthiCV.pdf';
+      link.click();
+      window.URL.revokeObjectURL(url);
+    }catch(error){
+      console.log("Error downloading Cv:",error);
+      
+    }
+    
+    // const blob = new Blob({type:'application/pdf'});
+    // const url = URL.createObjectURL(blob);
+    // if(linkRef.current) {
+    //   linkRef.current.href =url;
+    //   linkRef.current.download = headerData.resumePdf;
+    //   linkRef.current.click();
+    // }
+    
+    // URL.revokeObjectURL(url);
+  };
 
   return (
     <>
@@ -35,7 +61,7 @@ const Landing = () => {
                 className="text-black cursor-pointer "
               >
                 <h1
-                  className="mb-16 text-2xl text-gray-100 opacity-100 hover:text-white hover:cursor-pointer"
+                  className="mb-16 text-2xl font-semibold text-gray-100 opacity-100 hover:text-white hover:cursor-pointer hover:shadow-sm"
                   key={data.name}
                 >
                   {data.name}
@@ -54,7 +80,7 @@ const Landing = () => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <div className="z-10 mt-10 overflow-hidden bg-white rounded-full md:w-72 md:h-72 w-52 h-52 md:mt-24">
+            <div className="z-10 mt-[16%] overflow-hidden bg-white rounded-full md:w-72 md:h-72 md:mt-[35%] w-52 h-52">
               <img
                 src={headerData.image}
                 alt="Profile"
@@ -121,16 +147,16 @@ const Landing = () => {
           </div>
         </div>
         <div className="content-center order-2 text-gray-100 bg-black md:order-2 md:basis-3/5 h-4/6 md:h-screen p-9 min-h-fit">
-          <div className="flex-col mt-20 space-y-2 md:space-y-6 justify-items-center text-balance md:mt-0">
-            <h2 className="font-bold text-center md:text-xl">Hi I'm</h2>
-            <h1 className="text-lg font-bold text-center md:text-3xl">
+          <div className="flex-col space-y-2 md:space-y-6 justify-items-center text-balance md:mt-0 sm:mt-[15%]">
+            <h2 className="font-bold text-center md:text-2xl">Hi I'm</h2>
+            <h1 className="text-lg font-bold text-center md:text-5xl">
               {headerData.name}
             </h1>
             <h3 className="md:text-2xl md:no-underline overline">
               {headerData.title}
             </h3>
             <p className="text-justify md:text-xl">{headerData.desciption}</p>
-            <button className="px-5 py-2 text-black transition duration-300 ease-in-out delay-150 bg-gray-100 md:text-xl hover:-translate-y-1 hover:scale-110 hover:shadow-md hover:shadow-gray-100 rounded-2xl">
+            <button onClick={downloadCv} className="px-5 py-2 text-black transition duration-300 ease-in-out delay-150 bg-gray-100 md:text-xl hover:-translate-y-1 hover:scale-110 hover:shadow-md hover:shadow-gray-100 rounded-2xl">
               Download CV
             </button>
           </div>
