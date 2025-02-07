@@ -80,7 +80,7 @@ const Landing = () => {
             />
           </div>
           <div className="flex items-center justify-center">
-            <div className="z-10 mt-[16%] overflow-hidden bg-white rounded-full md:w-72 md:h-72 md:mt-[35%] w-52 h-52">
+            <div className="z-10 mt-[16%] overflow-hidden bg-white rounded-full md:w-72 md:h-72 md:mt-[18%] w-52 h-52 border-black border-8 md:border-none">
               <img
                 src={headerData.image}
                 alt="Profile"
@@ -147,16 +147,17 @@ const Landing = () => {
           </div>
         </div>
         <div className="content-center order-2 text-gray-100 bg-black md:order-2 md:basis-3/5 h-4/6 md:h-screen p-9 min-h-fit">
-          <div className="flex-col space-y-2 md:space-y-6 justify-items-center text-balance md:mt-0 sm:mt-[15%]">
-            <h2 className="font-bold text-center md:text-2xl">Hi I'm</h2>
-            <h1 className="text-lg font-bold text-center md:text-5xl">
-              {headerData.name}
-            </h1>
-            <h3 className="md:text-2xl md:no-underline overline">
+          <div className="flex-col space-y-2 md:space-y-6 justify-items-center text-balance md:mt-0 mt-[10%] md:p-8">
+            {/* <h2 className="font-bold text-center md:text-2xl">Hi I'm</h2> */}
+            
+            <h3 className="md:text-2xl ">
               {headerData.title}
             </h3>
+            <h1 className="text-2xl font-bold text-center text-orange-600 md:text-5xl md:no-underline overline">
+              {headerData.name}
+            </h1>
             <p className="text-justify md:text-xl">{headerData.desciption}</p>
-            <button onClick={downloadCv} className="px-5 py-2 text-black transition duration-300 ease-in-out delay-150 bg-gray-100 md:text-xl hover:-translate-y-1 hover:scale-110 hover:shadow-md hover:shadow-gray-100 rounded-2xl">
+            <button onClick={downloadCv} className="px-5 py-2 text-black transition duration-300 ease-in-out delay-150 bg-gray-100 mt-7 md:text-xl hover:-translate-y-1 hover:scale-110 hover:shadow-md hover:shadow-orange-600 rounded-2xl hover:bg-orange-600 hover:text-gray-100">
               Download CV
             </button>
           </div>
