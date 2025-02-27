@@ -10,11 +10,16 @@ import {
 } from "react-icons/fa6";
 import { navData } from "../../data/navData";
 
-const Landing = () => {
+const Landing = ({aboutRef,contactRef}) => {
   const [shownavItems, setShownavItems] = useState(false);
   console.log(shownavItems);
   console.log(navData);
   const linkRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+    setShownavItems(false); // Close menu after clicking (for mobile)
+  };
 
   const downloadCv=async()=>{
     console.log("clicked");
@@ -56,7 +61,10 @@ const Landing = () => {
               <>
               <a
                 key={data.name}
-                href={data.link}
+                onClick={() => {
+                  if (data.link === "#about") scrollToSection(aboutRef);
+                  if (data.link === "#contact") scrollToSection(contactRef);
+                }}
                 rel="noopener noreferrer"
                 className="text-black cursor-pointer "
               >
@@ -165,59 +173,6 @@ const Landing = () => {
       </div>
     </>
   );
-  // return (
-  //   <div className="flex flex-col items-center justify-center min-h-screen bg-orange-400">
-  //     <div className="mb-8 overflow-hidden rounded-full h-54 w-54">
-  //       <img
-  //         src={headerData.image}
-  //         alt="Profile"
-  //         className="object-cover w-full h-full"
-  //       />
-  //     </div>
-  //     <h1 className="mb-4 text-5xl italic font-bold text-white transform -rotate-6 ">- {headerData.name} -</h1>
-  //     <p className="pt-5 mb-8 text-2xl text-white">{headerData.title}</p>
-  //     <div className="flex space-x-4">
-  //           {(headerData.social).map((entry)=>{
-  //               <><h1>{entry.id}</h1>
-  //               {/* <a
-  //                   key={entry.id}
-  //                   href={entry.link}
-  //                   target="_blank"
-  //                   rel="noopener noreferrer"
-  //                   className="text-white cursor-pointer hover:text-orange-500"
-  //               >
-  //                   <FiTwitter />
-  //               </a> */}
-  //               </>
-  //           })}
-
-  //       <a
-  //         href="#"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //         className="text-white hover:text-orange-500"
-  //       >
-  //         <i className="fab fa-facebook-f"></i>
-  //       </a>
-  //       <a
-  //         href="#"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //         className="text-white hover:text-orange-500"
-  //       >
-  //         <i className="fab fa-linkedin-in"></i>
-  //       </a>
-  //       <a
-  //         href="#"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //         className="text-white hover:text-orange-500"
-  //       >
-  //         <i className="fab fa-instagram"></i>
-  //       </a>
-  //     </div>
-  //   </div>
-  // )
 };
 
 export default Landing;
