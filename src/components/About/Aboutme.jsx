@@ -1,16 +1,32 @@
-import React from 'react'
+import React from "react";
+import Card from "../Card";
+import {serviceData} from '../../data/serviceData';
 
 const Aboutme = () => {
   return (
-    <div className='h-screen bg-black'>
-    <div className="mx-8 border-b-4 border-orange-600 md:justify-center md:flex md:mx-20 md:pt-16"></div>
-      <p className='text-white'>this is aboutme</p>
+    <div className="bg-black ">
+      <div className="mx-8 border-b-4 border-orange-600 md:justify-center md:flex md:mx-20 md:pt-16"></div>
+      <div className="py-5 md:px-28 md:py-10 md:items-center md:justify-between">
+        <div className="text-white ">
+          <h1 className="text-3xl font-bold text-center md:text-4xl ">Who am I?</h1>
+          <div className="px-5">
+          <p className="py-6 mx-4 text-justify md:p-3 md:text-lg">I'm a passionate Software Engineer who loves turning ideas into functional and visually appealing digital experiences. With a strong interest in mobile app development, UI/UX design, and hosting, I enjoy crafting seamless applications that not only work great but also feel intuitive and engaging.
+Whether it's building dynamic web applications, designing smooth user experiences, or optimizing deployments, I'm always eager to explore new technologies and create solutions that make an impact.
+Let’s build something amazing together.</p>
+          </div>
+          
+        </div>
+        <div className="flex flex-wrap justify-center py-5">
+          {serviceData.map((service)=>(
+            <Card service={service}/>
+          ))}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Aboutme
-
+export default Aboutme;
 
 // import React from "react";
 // import "./aboutme.css";
