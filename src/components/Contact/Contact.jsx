@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaEnvelope,
   FaFacebook,
@@ -20,10 +20,15 @@ import { contactData } from "../../data/contactData";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
+  
+const [name,setName] =useState('');
+const [email,setEmail] =useState('');
+const [message,setMessage] =useState('');
+  
   return (
     <div>
       <div className="bg-black md:h-screen">
-        <div className=" md:flex md:justify-center md:items-center md:py-28">
+        <div className="bg-black md:flex md:justify-center md:items-center md:py-28">
           <div className="md:w-1/3 text-white bg-orange-600  md:mr-[-100px] z-10 md:rounded-3xl md:p-10 shadow-lg shadow-slate-600 py-7">
             <h1 className="pl-10 text-3xl font-semibold md:text-3xl md:p-0">
               Contact
@@ -63,16 +68,22 @@ const Contact = () => {
                   className="w-[80%] bg-slate-200 border-none h-10 px-5 rounded-lg my-4 "
                   type="text"
                   placeholder="Name"
+                  value={name}
+                  onChange={e => setName(e.target.value)}
                 />
                 <input
                   className="w-[80%] bg-slate-200 border-none h-10 px-5 rounded-lg my-4"
                   type="text"
                   placeholder="Email"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
                 />
                 <textarea
-                  className="w-[80%] bg-slate-200 border-none min-h-20 px-5 rounded-lg my-4 py-2"
+                  className="w-[80%] bg-slate-200 border-none min-h-20 px-5 rounded-lg my-4 py-2 max-h-28"
                   type="textarea"
                   placeholder="Message"
+                  value={message}
+                  onChange={e => setMessage(e.target.value)}
                 />
               </form>
               <button className="h-10 px-5 text-white bg-orange-500 rounded-lg hover:bg-orange-600">

@@ -10,9 +10,12 @@ export default function Home() {
 
   return (
     <>
-      <Landing aboutRef={aboutRef} contactRef={contactRef}/>
-      <section ref={aboutRef} id='about'><Aboutme/></section>
-      <section ref={contactRef} id='cpntact'><Contact/></section>
+      <Landing 
+      // aboutRef={aboutRef} contactRef={contactRef}
+
+      />
+      {/* <section ref={aboutRef} id='about'><Aboutme/></section>
+      <section ref={contactRef} id='cpntact'><Contact/></section> */}
       
     </>
   );

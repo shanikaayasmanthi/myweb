@@ -62,8 +62,8 @@ const Landing = ({aboutRef,contactRef}) => {
               <a
                 key={data.name}
                 onClick={() => {
-                  if (data.link === "#about") scrollToSection(aboutRef);
-                  if (data.link === "#contact") scrollToSection(contactRef);
+                  // if (data.link === "#about") scrollToSection(aboutRef);
+                  // if (data.link === "#contact") scrollToSection(contactRef);
                 }}
                 rel="noopener noreferrer"
                 className="text-black cursor-pointer "
