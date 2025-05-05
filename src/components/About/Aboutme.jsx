@@ -1,28 +1,28 @@
 import React from "react";
 import Card from "../Card";
 import { serviceData } from "../../data/serviceData";
-import FloatingWords from "../Skills";
-import { experiencesData } from "../../data/skillData";
-import BubbleMenu from "../Header";
-import CircularMenu from "../Header";
+// import FloatingWords from "../Skills";
+// import { experiencesData } from "../../data/skillData";
+// import BubbleMenu from "../Header";
+// import CircularMenu from "../Header";
 
 
 const Aboutme = () => {
 
-  const data = [
-    { id: 1, radius: 30, color: "red" },
-    { id: 2, radius: 40, color: "blue" },
-    { id: 3, radius: 35, color: "green" },
-    { id: 4, radius: 30, color: "red" },
-    { id: 5, radius: 40, color: "blue" },
-    { id: 6, radius: 35, color: "green" },
-    { id: 7, radius: 30, color: "red" },
-    { id: 8, radius: 40, color: "blue" },
-    { id: 9, radius: 35, color: "green" },
-    { id: 10, radius: 30, color: "red" },
-    { id: 11, radius: 40, color: "blue" },
-    { id: 12, radius: 35, color: "green" },
-  ];
+  // const data = [
+  //   { id: 1, radius: 30, color: "red" },
+  //   { id: 2, radius: 40, color: "blue" },
+  //   { id: 3, radius: 35, color: "green" },
+  //   { id: 4, radius: 30, color: "red" },
+  //   { id: 5, radius: 40, color: "blue" },
+  //   { id: 6, radius: 35, color: "green" },
+  //   { id: 7, radius: 30, color: "red" },
+  //   { id: 8, radius: 40, color: "blue" },
+  //   { id: 9, radius: 35, color: "green" },
+  //   { id: 10, radius: 30, color: "red" },
+  //   { id: 11, radius: 40, color: "blue" },
+  //   { id: 12, radius: 35, color: "green" },
+  // ];
   
   return (
     <div className="bg-black ">
