@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa6";
 import { navData } from "../../data/navData";
 
-const Landing = ({aboutRef,contactRef}) => {
+const Landing = ({ aboutRef, contactRef }) => {
   const [shownavItems, setShownavItems] = useState(false);
   console.log(shownavItems);
   console.log(navData);
@@ -21,22 +21,23 @@ const Landing = ({aboutRef,contactRef}) => {
     setShownavItems(false); // Close menu after clicking (for mobile)
   };
 
-  const downloadCv=async()=>{
+  const downloadCv = async () => {
     console.log("clicked");
-    
-    try{
-      const blob = await fetch(headerData.resumePdf).then((response)=>response.blob());
-      const url =window.URL.createObjectURL(blob);
-      const  link = document.createElement("a");
+
+    try {
+      const blob = await fetch(headerData.resumePdf).then((response) =>
+        response.blob()
+      );
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
       link.href = url;
-      link.download = 'shanika_ayasmanthiCV.pdf';
+      link.download = "shanika_ayasmanthiCV.pdf";
       link.click();
       window.URL.revokeObjectURL(url);
-    }catch(error){
-      console.log("Error downloading Cv:",error);
-      
+    } catch (error) {
+      console.log("Error downloading Cv:", error);
     }
-    
+
     // const blob = new Blob({type:'application/pdf'});
     // const url = URL.createObjectURL(blob);
     // if(linkRef.current) {
@@ -44,33 +45,33 @@ const Landing = ({aboutRef,contactRef}) => {
     //   linkRef.current.download = headerData.resumePdf;
     //   linkRef.current.click();
     // }
-    
+
     // URL.revokeObjectURL(url);
   };
 
   return (
     <>
       {shownavItems && (
-        <div className="absolute z-20 h-screen bg-black opacity-80 md:w-[35%] w-full text-gray-100  pl-16 pt-16  ">
+        <div className="flex items-center justify-center absolute z-20 h-screen bg-black opacity-80 md:w-[35%] w-full text-gray-100  ">
           <FaX
             className="absolute text-white cursor-pointer md:text-xl right-8 top-6"
             onClick={() => setShownavItems(false)}
           />
-          <div className="flex-col space-y-16">
+          <div className="flex flex-col items-center justify-center space-y-4">
             {navData.map((data) => (
               <>
-              <button
-  key={data.name}
-  onClick={() => {
-    if (data.link === "#about") scrollToSection(aboutRef);
-    if (data.link === "#contact") scrollToSection(contactRef);
-  }}
-  className="text-black bg-transparent border-none cursor-pointer"
->
-  <h1 className="mb-16 text-2xl font-semibold text-gray-100 opacity-100 hover:text-white hover:cursor-pointer hover:shadow-sm">
-    {data.name}
-  </h1>
-</button>
+                <button
+                  key={data.name}
+                  onClick={() => {
+                    if (data.link === "#about") scrollToSection(aboutRef);
+                    if (data.link === "#contact") scrollToSection(contactRef);
+                  }}
+                  className="text-black bg-transparent border-none cursor-pointer"
+                >
+                  <h1 className="mb-16 text-2xl font-semibold text-gray-100 opacity-100 hover:text-white hover:cursor-pointer hover:shadow-sm">
+                    {data.name}
+                  </h1>
+                </button>
               </>
             ))}
           </div>
@@ -154,15 +155,16 @@ const Landing = ({aboutRef,contactRef}) => {
         <div className="content-center order-2 text-gray-100 bg-black md:order-2 md:basis-3/5 h-4/6 md:h-screen p-9 min-h-fit">
           <div className="flex-col space-y-2 md:space-y-6 justify-items-center text-balance md:mt-0 mt-[10%] md:p-8">
             {/* <h2 className="font-bold text-center md:text-2xl">Hi I'm</h2> */}
-            
-            <h3 className="md:text-2xl ">
-              {headerData.title}
-            </h3>
+
+            <h3 className="md:text-2xl ">{headerData.title}</h3>
             <h1 className="text-2xl font-bold text-center text-orange-600 md:text-5xl md:no-underline overline">
               {headerData.name}
             </h1>
             <p className="text-justify md:text-xl">{headerData.desciption}</p>
-            <button onClick={downloadCv} className="px-5 py-2 text-black transition duration-300 ease-in-out delay-150 bg-gray-100 mt-7 md:text-xl hover:-translate-y-1 hover:scale-110 hover:shadow-md hover:shadow-orange-600 rounded-2xl hover:bg-orange-600 hover:text-gray-100">
+            <button
+              onClick={downloadCv}
+              className="px-5 py-2 text-black transition duration-300 ease-in-out delay-150 bg-gray-100 mt-7 md:text-xl hover:-translate-y-1 hover:scale-110 hover:shadow-md hover:shadow-orange-600 rounded-2xl hover:bg-orange-600 hover:text-gray-100"
+            >
               Download CV
             </button>
           </div>
