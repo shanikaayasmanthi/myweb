@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { headerData } from "../../data/headerData";
 import {
   FaBars,
@@ -14,7 +14,7 @@ const Landing = ({aboutRef,contactRef}) => {
   const [shownavItems, setShownavItems] = useState(false);
   console.log(shownavItems);
   console.log(navData);
-  const linkRef = useRef(null);
+  // const linkRef = useRef(null);
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
@@ -59,21 +59,18 @@ const Landing = ({aboutRef,contactRef}) => {
           <div className="flex-col space-y-16">
             {navData.map((data) => (
               <>
-              <a
-                key={data.name}
-                onClick={() => {
-                  // if (data.link === "#about") scrollToSection(aboutRef);
-                  // if (data.link === "#contact") scrollToSection(contactRef);
-                }}
-                rel="noopener noreferrer"
-                className="text-black cursor-pointer "
-              >
-                <h1
-                  className="mb-16 text-2xl font-semibold text-gray-100 opacity-100 hover:text-white hover:cursor-pointer hover:shadow-sm"
-                  key={data.name}
-                >
-                  {data.name}
-                </h1></a>
+              <button
+  key={data.name}
+  onClick={() => {
+    if (data.link === "#about") scrollToSection(aboutRef);
+    if (data.link === "#contact") scrollToSection(contactRef);
+  }}
+  className="text-black bg-transparent border-none cursor-pointer"
+>
+  <h1 className="mb-16 text-2xl font-semibold text-gray-100 opacity-100 hover:text-white hover:cursor-pointer hover:shadow-sm">
+    {data.name}
+  </h1>
+</button>
               </>
             ))}
           </div>

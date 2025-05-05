@@ -23,7 +23,7 @@ const Card = ({service}) => {
     }
   return (
     <div className="p-8 text-white bg-orange-600 place-items-center w-[300px] h-[250px] m-2 items-center">
-    <img src={getImage(service.title)} alt='picture' className="w-20 h-20 p-2 border"/>
+    <img src={getImage(service.title)} alt='' className="w-20 h-20 p-2 border"/>
       <h1 className='font-bold text-center text-[17px] py-1'> {service.title}</h1>
       <p className="font-thin text-justify text-md text-slate-100">{service.description}</p>
     </div>

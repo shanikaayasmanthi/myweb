@@ -4,20 +4,20 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
-  FaLocationArrow,
+  // FaLocationArrow,
   FaMobile,
-  FaPhone,
-  FaRulerVertical,
+  // FaPhone,
+  // FaRulerVertical,
 } from "react-icons/fa";
 import {
-  FaLine,
+  // FaLine,
   FaLocationDot,
-  FaLocationPin,
-  FaLocationPinLock,
-  FaRulerHorizontal,
+  // FaLocationPin,
+  // FaLocationPinLock,
+  // FaRulerHorizontal,
 } from "react-icons/fa6";
 import { contactData } from "../../data/contactData";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Contact = () => {
   
