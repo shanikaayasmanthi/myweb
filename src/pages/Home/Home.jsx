@@ -1,26 +1,20 @@
-import React, { useRef } from 'react';
-import Landing from '../../components/Landing/Landing';
-import Contact from '../../components/Contact/Contact';
-import Aboutme from '../../components/About/Aboutme';
+import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import Landing from "../../components/Landing/Landing";
+import Aboutme from "../../components/About/Aboutme";
+import Experience from "../../components/Experience/Experience";
+import Education from "../../components/Education/Education";
+import Contact from "../../components/Contact/Contact";
 
 export default function Home() {
-
-  const aboutRef = useRef(null);
-  const contactRef = useRef(null);
-
   return (
     <>
-      <Landing 
-      aboutRef={aboutRef} contactRef={contactRef}
-
-      />
-      <section ref={aboutRef} id='about'><Aboutme/></section>
-      <section ref={contactRef} id='cpntact'><Contact/></section>
-      
+      <Navbar />
+      <Landing />
+      <Aboutme />
+      <Experience />
+      <Education />
+      <Contact />
     </>
   );
 }
-
-
-
-

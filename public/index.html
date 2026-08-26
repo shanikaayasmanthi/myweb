@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="alternate icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Shanika Ayasmanthi — Software Engineer portfolio: experience, education, and projects."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.svg" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -25,10 +26,119 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Shanika Ayasmanthi</title>
+    <style>
+      html, body { background-color: #000000; margin: 0; }
+      #app-skeleton {
+        min-height: 100vh;
+        box-sizing: border-box;
+        padding: 20px 20px 0;
+      }
+      #app-skeleton * { box-sizing: border-box; }
+      .skel-block {
+        border-radius: 9999px;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.04) 25%,
+          rgba(255, 255, 255, 0.1) 37%,
+          rgba(255, 255, 255, 0.04) 63%
+        );
+        background-size: 400% 100%;
+        animation: skel-shimmer 1.8s ease-in-out infinite;
+      }
+      @keyframes skel-shimmer {
+        0% { background-position: 100% 50%; }
+        100% { background-position: 0 50%; }
+      }
+      .skel-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1152px;
+        margin: 0 auto 60px;
+        padding-top: 8px;
+      }
+      .skel-logo { width: 110px; height: 26px; }
+      .skel-nav-links { display: none; gap: 24px; }
+      .skel-pill { width: 64px; height: 16px; }
+      .skel-nav-btn { width: 120px; height: 36px; display: none; }
+      @media (min-width: 768px) {
+        .skel-nav-links { display: flex; }
+        .skel-nav-btn { display: block; }
+      }
+      .skel-hero {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        max-width: 1152px;
+        margin: 0 auto;
+        align-items: center;
+      }
+      @media (min-width: 1024px) {
+        .skel-hero {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .skel-hero-text { width: 100%; max-width: 560px; }
+      .skel-line { border-radius: 6px; margin-bottom: 14px; }
+      .skel-tag { width: 90px; height: 12px; }
+      .skel-name { width: 220px; height: 22px; }
+      .skel-title { width: 100%; max-width: 380px; height: 44px; border-radius: 10px; }
+      .skel-title2 { width: 60%; max-width: 260px; height: 44px; border-radius: 10px; margin-bottom: 22px; }
+      .skel-para { width: 100%; height: 12px; }
+      .skel-para-short { width: 80%; height: 12px; }
+      .skel-row { display: flex; gap: 14px; margin: 22px 0; }
+      .skel-circle { width: 40px; height: 40px; }
+      .skel-btn-primary { width: 130px; height: 46px; }
+      .skel-btn-outline { width: 150px; height: 46px; }
+      .skel-hero-avatar { display: flex; justify-content: center; width: 100%; }
+      .skel-avatar { width: 220px; height: 220px; }
+      @media (min-width: 768px) {
+        .skel-avatar { width: 320px; height: 320px; }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div id="app-skeleton" aria-hidden="true">
+        <div class="skel-nav">
+          <div class="skel-block skel-logo"></div>
+          <div class="skel-nav-links">
+            <div class="skel-block skel-pill"></div>
+            <div class="skel-block skel-pill"></div>
+            <div class="skel-block skel-pill"></div>
+            <div class="skel-block skel-pill"></div>
+          </div>
+          <div class="skel-block skel-nav-btn"></div>
+        </div>
+        <div class="skel-hero">
+          <div class="skel-hero-text">
+            <div class="skel-block skel-line skel-tag"></div>
+            <div class="skel-block skel-line skel-name"></div>
+            <div class="skel-block skel-line skel-title"></div>
+            <div class="skel-block skel-line skel-title2"></div>
+            <div class="skel-block skel-line skel-para"></div>
+            <div class="skel-block skel-line skel-para" style="width: 90%;"></div>
+            <div class="skel-block skel-line skel-para-short"></div>
+            <div class="skel-row">
+              <div class="skel-block skel-circle"></div>
+              <div class="skel-block skel-circle"></div>
+              <div class="skel-block skel-circle"></div>
+              <div class="skel-block skel-circle"></div>
+            </div>
+            <div class="skel-row">
+              <div class="skel-block skel-btn-primary"></div>
+              <div class="skel-block skel-btn-outline"></div>
+            </div>
+          </div>
+          <div class="skel-hero-avatar">
+            <div class="skel-block skel-avatar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

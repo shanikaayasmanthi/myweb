@@ -1,6 +1,7 @@
-export const navData =[
-    {name:"Home",link:"/"},
-    {name:"About",link:"#about"},
-    {name:"Education",link:"#"},
-    {name:"Projects",link:"#"},
-    {name:"Contact",link:"#contact"}];
+export const navData = [
+  { name: "Home", link: "#home" },
+  { name: "About", link: "#about" },
+  { name: "Experience", link: "#experience" },
+  { name: "Education", link: "#education" },
+  { name: "Contact", link: "#contact" },
+];
